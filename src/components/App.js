@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import UserCreate from "./UserCreate";
 import LanguageContext from "../contexts/LanguageContext";
+import ColorContext from "../contexts/ColorContext";
 
 import "./App.css";
 
@@ -27,7 +28,9 @@ const App = () => {
       </div>
 
       <LanguageContext.Provider value={language}>
-        <UserCreate />
+        <ColorContext.Provider value="red">
+          <UserCreate />
+        </ColorContext.Provider>
       </LanguageContext.Provider>
     </div>
   );
